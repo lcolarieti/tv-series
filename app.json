@@ -5,6 +5,15 @@
     "name": "TVSeries",
     "slug": "TVSeries",
     "version": "1.0.0",
+    "icon": "./icon.png",
+    "ios": {
+      "bundleIdentifier": "com.lcolarieti.tvseries",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.lcolarieti.tvseries",
+      "versionCode": 1
+    },
     "assetBundlePatterns": [
       "**/*"
     ]
