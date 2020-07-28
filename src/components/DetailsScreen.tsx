@@ -1,5 +1,5 @@
 import React, {ReactElement, useCallback, useEffect} from 'react';
-import {View, Text, StyleSheet, Linking, Alert} from 'react-native';
+import {View, Text, StyleSheet, Linking, Alert, ScrollView} from 'react-native';
 import { RouteProp } from '@react-navigation/native';
 import {StackParamList} from '../../App';
 import {StackNavigationProp} from '@react-navigation/stack';
@@ -48,26 +48,28 @@ const DetailsScreen: React.FC<Props> = (props: Props) => {
   };
 
   return <View>
-    <Card>
-      <View style={styles.headerWrap}>
-        <Avatar
-          size='giant'
-          source={{uri: show.image ?
-              show.image.medium :
-              'https://via.placeholder.com/210x295'}}
-        />
-        <Text style={styles.headerText}>{show.name}</Text>
-        {show.summary !== '' && <HTML html={show.summary}/>}
-      </View>
-      <Divider />
-      {createText('Type', show.type)}
-      {createText('Language', show.language)}
-      {createText('Genres', show.genres)}
-      {createText('Premiered', show.premiered)}
-      {createLink('Official site', show.officialSite)}
-      {createText('Rating', show.rating?.average?.toString())}
+    <ScrollView>
+      <Card>
+        <View style={styles.headerWrap}>
+          <Avatar
+            size='giant'
+            source={{uri: show.image ?
+                show.image.medium :
+                'https://via.placeholder.com/210x295'}}
+          />
+          <Text style={styles.headerText}>{show.name}</Text>
+          {show.summary !== '' && <HTML html={show.summary}/>}
+        </View>
+        <Divider />
+        {createText('Type', show.type)}
+        {createText('Language', show.language)}
+        {createText('Genres', show.genres)}
+        {createText('Premiered', show.premiered)}
+        {createLink('Official site', show.officialSite)}
+        {createText('Rating', show.rating?.average?.toString())}
 
-    </Card>
+      </Card>
+    </ScrollView>
   </View>
 };
 
