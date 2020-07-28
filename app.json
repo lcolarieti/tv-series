@@ -1,9 +1,9 @@
 {
-  "name": "AwesomeProject",
-  "displayName": "AwesomeProject",
+  "name": "TVSeries",
+  "displayName": "TV Series",
   "expo": {
-    "name": "AwesomeProject",
-    "slug": "AwesomeProject",
+    "name": "TVSeries",
+    "slug": "TVSeries",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

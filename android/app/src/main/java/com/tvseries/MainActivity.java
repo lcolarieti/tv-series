@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.tvseries;
 
 import android.os.Bundle;
 
